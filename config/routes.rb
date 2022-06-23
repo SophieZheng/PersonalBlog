@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   get "welcome/index"  
   root to: "welcome#index"  
+
+  resources :articles
 end
