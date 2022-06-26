@@ -10,6 +10,19 @@
 
 
     <style>
+      a.icon_color {
+        color: #FFFFFF;
+      }
+
+      h1.text-position {
+        text-align: center;
+      }
+
+      p.text-position {
+        text-align: center;
+      }
+
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -25,7 +38,7 @@
       }
 
       .b-example-divider {
-        height: 3rem;
+        height: 5rem;
         background-color: rgba(0, 0, 0, .1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
@@ -60,22 +73,6 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-
-      .left {
-        padding-inline-end:0;
-      }
-
-      .right {
-        padding-inline-start:0;
-      }
-
-      .h-img {
-         height: 40vh; !important;
-      }
-
-      a.icon_color {
-        color: #212529;
-      }
     </style>
 
     
@@ -83,12 +80,20 @@
   <body>
     
 <main>
+  <div class="container">
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 link-secondary">About Me</a></li>
+        <li><a href="/articles" class="nav-link px-2 link-dark">Data Project</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Yoga & Surf Life</a></li>
+      </ul>
+  </div>
+
   <div class="container py-4">
     <div class="mb-4 bg-light">
       <div class="container-fluid py-5" style="background-image: url(<%= asset_path 'waves3.png' %>); height: 30vh">
-        <h1 class="display-5 fw-bold">Hey, I'm Sophie Zheng</h1>
-        <p class="col-md-8 fs-4"> <a class='icon_color' href='/articles'> A data scientist, yogi and surfer </a></p>
-        <p class="col-md-8 fs-4">
+        <h1 class="display-5 fw-bold text-white text-position">Hey, I'm Sophie Zheng</h1>
+        <p class="fs-4 text-white text-position">A data scientist, yogi and surfer</p>
+        <p class="fs-4 text-position">
           <a class='icon icon_color'href="https://github.com/SophieZheng"><i class="bi bi-github"></i></a> 
           <a class='icon icon_color'href="https://www.linkedin.com/in/baimin-sophie-zheng/"><i class="bi bi-linkedin"></i></a> 
           <a class='icon icon_color'href="https://www.instagram.com/YogaSophieZh/"><i class="bi bi-instagram"></i></a> 
@@ -97,47 +102,49 @@
       </div>
     </div>
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-3 left">
-        <div class="h-img p-5 text-white bg-dark">
-          <h2>Data</h2>
-          <p>I love data. I am fascinated by probability and statistics. They are powerful tools to explore and adapt your life in style.</p>
-        </div>
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Data </h2>
+        <p class="lead">I love data. I am fascinated by probability and statistics. They are powerful tools to explore and adapt your life in style.</p>
       </div>
-      <div class="col-md-9 right">
-        <div class="h-img p-5 bg-light border"  style="background-image: url(<%= asset_path 'linkedin.png' %>); background-size: cover">
-        </div>
+      <div class="col-md-5">
+        <%= image_tag "linkedin.png", style: 'height:100%;width:100%;' %>
       </div>
     </div>
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-9 left">
-        <div class="h-img p-5 bg-light border" style="background-image: url(<%= asset_path 'yoga.png' %>); background-size: cover">
-        </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1"> Yoga </h2>
+        <p class="lead"> Yoga amazed me when I found myself doing arm balance poses. Yoga taught me so much about mindfulness, Ying and Yang, and moderation. </p>
       </div>
-      <div class="col-md-3 right">
-        <div class="h-img p-5 text-white bg-dark">
-          <h2>Yoga</h2>
-          <p>Yoga amazed me when I found myself doing arm balance poses. Yoga taught me so much about mindfulness, Ying and Yang, and moderation.</p>
-        </div>
+      <div class="col-md-5 order-md-1">
+        <%= image_tag "yoga.jpeg", style: 'height:100%;width:100%;' %>
       </div>
     </div>
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-3 left">
-        <div class="h-img p-5 text-white bg-dark">
-          <h2>Surfing</h2
-          <p>Still Learning... I love ocean! I feel free when I am on a surfbaord.</p>
-        </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"> Surfing </h2>
+        <p class="lead">Still Learning... I love ocean! I feel free when I am on a surfbaord.</p>
       </div>
-      <div class="col-md-9 right">
-        <div class="h-img p-5 bg-light border" style="background-image: url(<%= asset_path 'surfboard.jpg' %>); background-size: cover">
-        </div>
+      <div class="col-md-5">
+        <%= image_tag "surfboard.jpg", style: 'height:100%;width:100%;' %>
       </div>
     </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
 
     <footer class="pt-3 mt-4 text-muted border-top">
-      &copy; 2022
+     Copyright &copy; 2022 Sophie Zheng
     </footer>
   </div>
 </main>
